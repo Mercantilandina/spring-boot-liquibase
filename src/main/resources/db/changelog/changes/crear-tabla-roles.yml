@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 'crear tabla de roles' 
+      author: autor
+      changes:
+        - createTable:
+            tableName: rol
+            columns:
+              - column:
+                  name: nombre
+                  type: char(50)
+                  constraints:
+                    primaryKey: true
+                    nullable: false  
+              - column:
+                  name: descripcion
+                  type: varchar(200)
+                  defaultValue: ''

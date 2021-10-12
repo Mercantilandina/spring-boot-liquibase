@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<databaseChangeLog   
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"   
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">   
+  
+  <changeSet id="crear tabla rolusuario" author="autor">
+      <createTable tableName="rolusuario">
+          <column name="usuario_id" type="char(36)">
+              <constraints nullable="false"
+                           foreignKeyName="fk_rolusuario_usuario_id"
+                           referencedColumnNames="id"
+                           referencedTableName="usuario"/>
+          </column>
+          <column name="rol_nombre" type="char(10)">
+              <constraints nullable="false"
+                           foreignKeyName="fk_rolusuario_rol_nombre"
+                           referencedColumnNames="nombre"
+                           referencedTableName="rol"/>
+          </column>
+      </createTable>
+  </changeSet>                    
+</databaseChangeLog>
