@@ -21,7 +21,7 @@ Cuando la aplicación se inicia se observa que Liquibase entra en acción y apli
 
 ## Consultar los cambios de Liquibase
 
-Para consultas las acciones ejecutadas por Liquibase ingresar en el contenedor de MariaDB, ingresando el siguiente comando:
+Para consultar las acciones ejecutadas por Liquibase ingresar en el contenedor de MariaDB:
 
 ```
 docker exec -it mariadb-liquibase sh
